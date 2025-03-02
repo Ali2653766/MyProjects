@@ -1,0 +1,69 @@
+/* تطبيق الخصائص العامة على جميع العناصر */
+* {
+  box-sizing: border-box; /* يضمن أن الحشو والحدود تؤخذ في الاعتبار عند تحديد أبعاد العنصر */
+  margin: 0; /* إزالة الهوامش الافتراضية */
+  padding: 0; /* إزالة التباعد الافتراضي */
+  font-family: Arial, sans-serif; /* تعيين نوع الخط */
+}
+
+/* تنسيق عنصر #main */
+#main {
+  background-color: #4600FF;
+  margin: 5px;
+}
+
+/* تنسيق عنصر #under-main */
+#under-main {
+  border: 0;
+  padding: 10px;  
+}
+
+/* تنسيق عناصر hr */
+hr {
+  border: 2px solid black; /* تصحيح الخطأ: يجب تحديد نوع الحد بشكل صحيح */
+  margin: 5px;
+}
+
+/* تنسيق جميع عناصر div */
+div {
+  border: 3px solid black; /* تصحيح الخطأ: يجب تحديد نوع الحد بشكل صحيح */
+}
+
+/* تنسيق عناصر img */
+img {
+  border: 3px solid black; /* تصحيح الخطأ: يجب تحديد نوع الحد بشكل صحيح */
+  width: 80%;
+  padding: 0; /* إزالة التباعد */
+}
+
+/* تنسيق الفقرة التي تحمل معرف #frist-p */
+#frist-p {
+  color: #DAF7A6;
+}
+
+/* تنسيق عناصر span */
+strong{
+  color: #f41f1f;
+}
+
+/* تنسيق جميع عناصر p */
+p {
+  font-size: 15px;
+  font-weight: 700;
+  color: white;
+  margin: 6px;
+  text-shadow: 
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px  1px 0 #000,
+    1px  1px 0 #000;
+}
+
+/* تنسيق عنصر h1 */
+h1 {
+  border: 3px solid black; /* تصحيح الخطأ: يجب تحديد نوع الحد بشكل صحيح */
+  color: white; /* تصحيح الخطأ: تم إزالة المسافة غير الضرورية */
+  margin-bottom: 6px;
+  padding: 3px;
+  position:relative;
+}

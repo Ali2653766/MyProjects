@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    
+    min-height: 100vh;       /* Makes sure the body takes up the full viewport height */
+    margin: 0;
+}
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; 
+}
+@keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px); /* Starts 20px below its final position */
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0); /* Moves to its original position */
+      }
+    }
+
+    /* Apply the animation to an element */
+    .fade-in-up {
+      opacity: 0; /* Initial state before animation */
+      animation: fadeInUp 2s ease-in-out forwards; /* Animation duration is 1s */
+    }
+
+.link{
+	background-color:#2694dd;
+	color:#ffffff;
+	font-size:1.5rem;
+	font-weight:800;
+	border:#04496b;
+	width:800;
+	border-radius:.5rem;
+	text-decoration:none;
+	padding:.4rem;
+	opacity: 0; /* Initial state before animation */
+	animation: fadeInUp 3s ease-in-out forwards; /* Animation duration is 1s */
+	
+	
+}
+.main{
+	width:100%;
+	padding:6rem .4rem;
+	margin:0 auto;
+	flex-grow:1;
+	min-height:90vh;
+	align-items:center;
+	background-color:#1b263b;
+	color:#f5f5dc;
+	
+}
+.header{
+	background-color: #f0f0f0;
+	width: 100%;
+	position: fixed;
+	z-index: 999;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px ;
+	border-radius:.3rem;
+	height:3.5rem;
+	font-size:.8rem;
+}
+.header-img
+{
+	width:2.5rem;
+	height:2.5rem;
+}
+.header-link
+{
+	margin-right:5px;
+	margin-left:5px;
+	text-decoration:none;
+	padding:5px;
+	font-size:.6rem;
+	font-weight:900;
+} 
+.footer
+{
+	background-color: #000016;
+	color: #fff;
+	padding: 2em;
+	display: flex;
+	justify-content: space-between;
+}
+.title
+{
+	display: flex;
+	justify-content: center;
+	color: #3a6cf4;
+	font-size: 2.2em;
+	font-weight: 800;
+	margin-bottom: 30px;
+}
+.footer-link
+{
+	padding:5px;
+	margin:5px;
+	text-decoration:none;
+	font-weight:700;
+	font-size:.8rem;
+}
+.h3
+{
+	color:#008b8b;
+}
+.bio
+{
+	margin:8px;
+	font-family:Verdana,Arial,sans-serif;
+	font-size:1.1rem;
+	text-align:center;
+}
+.icon
+{
+	background-color: #f0f0f0;
+	color:#008b8b;
+	border-radius:9px;
+	padding:8px;
+	margin:10px;
+	width: 95%;
+	box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+	transition: 0.7s ease;
+	font-size:1.5em;
+	text-align:center;
+}
+.icon:hover
+{
+	transform:scale(1.1);
+} 

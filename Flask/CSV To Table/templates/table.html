@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+
+{% block title %}CSV Table{% endblock %}
+
+{% block content %}
+    <h2 class="text-center">CSV Data</h2>
+    <form method="get" action="/">
+        <button class="btn btn-primary" type="submit">Upload Again</button>
+    </form>
+    <hr>
+
+    <!-- مربع البحث -->
+    <div class="input-group flex-nowrap">
+        <span class="input-group-text">Search</span>
+        <input type="text" class="form-control" id="searchInput" placeholder="Search...">
+    </div>
+    <hr>
+
+    <!-- عرض الجدول -->
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    {% for header in headers %}
+                        <th>{{ header }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                {% for row in rows %}
+                    <tr>
+                        {% for cell in row %}
+                            <td>{{ cell }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- مؤشر التحميل -->
+    <div id="loading" class="text-center" style="display: none;">
+        <p>جارٍ تحميل المزيد...</p>
+    </div>
+{% endblock %}

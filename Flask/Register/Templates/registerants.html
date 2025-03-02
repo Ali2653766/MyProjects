@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block body %}
+
+	<h1>Registrants</h1>
+    {% if registrants %}
+	    <table>
+		    <thead>
+			    <tr>
+			    	<th>Id</th>
+				    <th>Name</th>
+				    <th>Sport</th>
+			    </tr>
+		    </thead>
+		    <tbody>
+			    {%for registrant in registrants%}
+				    <tr>
+				    	<td>{{ registrant.id}}</td>
+					    <td>{{ registrant.name }}</td>
+					    <td>{{ registrant.sport }}</td>
+					    <td><a href="/deregist?id={{ registrant['id'] }}">Delete</a></td>
+				    </tr>
+			    {% endfor %} 
+		    </tbody>
+	    </table>
+    {% else %}
+        <p>No registrants yet.</p>
+    {% endif %}
+{% endblock %}

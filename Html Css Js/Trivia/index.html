@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3 class="question">What is the element that abbreviated FE?</h3>
+                <button class="correct">Iron</button>
+                <button class="wrong">Gold</button>
+                <button class="wrong">Diamond</button>
+                <button class="wrong">Coal</button>
+                
+            </div>
+            
+            
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>Which country has the pyramids? </h3>
+                <input class="texts"  >
+            	<h3>Which country has makka? </h3>
+            	<input required class="texts" ><br><br>
+            	<center>
+            	<button onclick="checkInputs()"onclick="check_text()"type="submit" >Submit</button>
+            	</center>
+            </div>
+            
+        </div>
+        <script>
+        // TODO: Add code to check answers to questions
+        let corrects = document.querySelectorAll(".correct");
+        let wrong = document.querySelectorAll(".wrong");
+        let feedback = document.createElement("p");
+        feedback.classList.add("feedback");
+        let texts = document.querySelectorAll(".texts");
+        let question = document.querySelectorAll(".question");
+        for (let i = 0 ;i< corrects.length;i++){
+        corrects[i].addEventListener("click", function() {
+        corrects[i].style.backgroundColor = "green";
+        feedback.innerHTML = "Correct!";
+        
+        let existingFeedback = corrects[i].nextElementSibling;
+        if (!existingFeedback || !existingFeedback.classList.contains('feedback')) {
+        let feedback = document.createElement("p");
+        feedback.classList.add("feedback");
+        feedback.innerHTML = "Correct!";
+        corrects[i].after(feedback);
+        } else {
+        existingFeedback.innerHTML = "Correct!";
+        }
+        })
+        
+        }
+        
+        for (let i = 0 ;i< wrong.length;i++){
+        wrong[i].addEventListener("click", function() {
+        wrong[i].style.backgroundColor = "red";
+        feedback.innerHTML = "Wrong!";
+        let parentQuestion = wrong[i].closest('.section');
+        let existingFeedback = wrong[i].nextElementSibling;
+        
+        if (!existingFeedback || !existingFeedback.classList.contains('feedback')) {
+        let feedback = document.createElement("p");
+        feedback.classList.add("feedback");
+        feedback.innerHTML = "Wrong!";
+        wrong[i].after(feedback);
+        } else {
+        existingFeedback.innerHTML = "Wrong!";
+        }
+        
+        } )
+        }
+        function check_text() {
+        //TODO: Check the text answer is in the answers
+        let answers = ["egypt", "saudia arabia"];
+        for (let i = 0;i< texts.length;i++) 
+        {
+        if (texts[i].value.trim().toLowerCase()== answers[i]) {
+        texts[i].style.backgroundColor = "green";
+        }
+        else{
+        texts[i].style.backgroundColor = "red";
+        } 
+        } 
+        }
+        function checkInputs() {
+        for (let i = 0; i < texts.length;i++){
+        
+        
+        // Check if any input is empty
+        if (!texts[i].value) {
+        alert("Please fill in all required fields.");
+        }} 
+        }
+        </script>
+        </body>
+</html>

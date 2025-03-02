@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <haed>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="style.css">
+        <title>Sign Up</title>
+    </haed>
+    <body>
+        <center>
+        <h1 id="title">Sign Up Form</h1>
+        <p id="description">This is my survey to free code camp, please fill the inputs below</p>
+
+        <form method="post">
+            <label id="name-label">Name
+                <input required="required"id="name" placeholder="Enter your name" type="text">
+            </label>
+            <label id="email-label">Email
+                <input required="required"id="email" placeholder="Enter your email" type="email">
+            </label>
+            <label id="new-pass-label">Creat Password <input required="required"id="new-pass" placeholder="Enter ypur password" type="password"></label>
+            <label id="con-pass-label">Confirm Password
+                <input required="required"id="con-pass" placeholder="Confirm the password" type="password">
+            </label>
+            <label id="number-label">Age
+                <input required="required"id="number" placeholder="Enter your age" type="number">
+            </label>
+            <label id="male-label">Gender
+                <select required="required" id="male" placeholder="Enter your age">
+                    <option value="male">
+                        Male
+                    </option>
+                    <option value="female">
+                        Female
+                    </option>
+                    <option value="i prefer not saying">
+                        I prefer not saying
+                    </option>
+                </select>
+            </label>
+            <label >what's your opinion about my website
+                <textarea placeholder="Enter your comment..." rows="5" cols="60"></textarea>
+            </label>
+            <input type="submit">
+        </form>
+        </center>
+    </body>
+</html>

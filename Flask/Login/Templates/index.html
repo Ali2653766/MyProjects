@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+	{% if name %}
+		<h2>You are Registered As {{name}}!</h2>
+	{% else %}
+		<h2>You aren't Registered! </h2>
+		<a href="/login" >Log in Now!!</a>
+	{% endif %}
+
+{% endblock %} 

@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block title %}Upload CSV{% endblock %}
+
+{% block content %}
+    <h2 class="text-center">Upload CSV File</h2>
+    <form action="/upload" method="post" enctype="multipart/form-data" class="mt-4">
+        <div class="mb-3">
+            <label for="file" class="form-label">Choose CSV File:</label>
+            <input type="file" class="form-control" id="file" name="file" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Upload</button>
+    </form>
+{% endblock %}

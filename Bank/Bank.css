@@ -1,0 +1,23 @@
+body{
+	margin:0px;
+	padding:0px;
+} 
+header{
+	background:rgb(30,150,255);
+	height:8em;
+}
+h1 {
+	color:white;
+	padding:40px;
+	font-size:2em;
+}
+h2{
+	margin:10px;
+}
+.qs{
+	margin:2px;
+}
+button{
+	margin:5px;
+	background:rgb(50,150,255);
+} 

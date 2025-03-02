@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+
+    <div class="table-responsive" style="overflow: auto; max-height: 580px">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Symbol</th>
+                    <th scope="col">Shares</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">TOTAL</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for stock in stocks %}
+                <tr>
+                    <td>{{stock['symbol']}}</td>
+                    <td>{{stock['shares']}}</td>
+                    <td>{{stock['price']}}</td>
+                    <td>{{stock['total_price']}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot>
+            	<tr>
+           		 	<td class="border-0 fw-bold" colspan="3">Cash</td>
+           		 	<td class="border-0">{{cash}}</td>
+            	</tr>
+            	<tr>
+            		<td class="border-0 fw-bold" colspan="3">TOTAL</td>
+            		<td class="border-0">{{total}}</td>
+            	</tr>
+            </tfoot>
+        </table>
+    </div>
+{% endblock %}
